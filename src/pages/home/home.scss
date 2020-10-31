@@ -1,3 +1,27 @@
 page-home {
+    
+    ion-content.content.content-md {
+        background-image: linear-gradient(#f6fbfe, #e3eaf2);
+    }
+    
+    ion-input{
+       background-color: transparent;
+    }
+
+    ion-item.item-md {
+        background-color: transparent;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        align-self: center;
+        margin: auto;
+        display: block;
+        padding: 10px;
+    }
 
 }
