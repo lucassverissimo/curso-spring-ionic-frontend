@@ -22,6 +22,15 @@ export class HomePage {
     public auth: AuthService
     ) {
   }
+  
+  ionViewDidEnter(){
+    this.auth.refreshToken()
+    .subscribe(response => {
+      this.auth.successfulLogin(response.headers.get('Authorization'));
+      this.navCtrl.setRoot('CategoriasPage');      
+    },
+    error => {});
+  }
 
   login() {
     this.auth.authenticate(this.creds)
