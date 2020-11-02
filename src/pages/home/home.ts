@@ -22,9 +22,7 @@ export class HomePage {
     public auth: AuthService
     ) {
   }
-  
-  
-
+    
   login() {
     this.auth.authenticate(this.creds)
     .subscribe(response => {
@@ -50,4 +48,9 @@ export class HomePage {
   ionViewDidLeave(){
     this.menu.swipeEnable(true);
   }
+
+  signup(){
+    this.navCtrl.push('SignupPage');
+  }
+
 }
